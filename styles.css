@@ -1,0 +1,450 @@
+
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Font umum, bisa diganti */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Background abu-abu muda */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    border-bottom: 1px solid #eee;
+}
+
+.header-top a {
+    color: #777;
+    margin-left: 15px;
+}
+.header-top a:hover {
+    color: #FF5722; /* Warna Shopee */
+}
+
+.header-middle {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 1em;
+    background-color: #fff;
+}
+
+.search-bar button {
+    background-color: #FF5722; /* Warna Shopee */
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e64a19; /* Warna Shopee lebih gelap */
+}
+
+.cart-icon {
+    margin-left: 30px;
+}
+
+.cart-icon a {
+    font-size: 1.8em;
+    color: #FF5722; /* Warna Shopee */
+}
+.cart-icon a:hover {
+    color: #e64a19;
+}
+
+
+/* Main Navigation */
+.main-nav {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Menyebar item */
+}
+
+.main-nav ul li a {
+    color: #555;
+    font-weight: 500;
+    padding: 5px 10px;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* Class 'active' akan ditambahkan JS */
+    color: #FF5722;
+    text-decoration: underline;
+}
+
+/* Hero Banner */
+.hero-banner {
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.hero-banner img {
+    width: 100%;
+    display: block;
+}
+
+/* Category Grid */
+.category-grid {
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.category-grid h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 1.5em;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsif */
+    gap: 15px;
+}
+
+.category-item {
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.category-item:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+.category-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0;
+}
+
+/* Product Grid */
+.product-grid {
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.product-grid h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 1.5em;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Minimal 200px, menyesuaikan */
+    gap: 15px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Tinggi gambar produk fix */
+    object-fit: cover; /* Agar gambar tidak pecah */
+    display: block;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-info h3 {
+    font-size: 0.95em;
+    margin: 0 0 5px 0;
+    height: 38px; /* Untuk memastikan 2 baris teks */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+      line-clamp: 2;
+    color: #333;
+}
+
+.product-info .price {
+    color: #FF5722; /* Warna harga Shopee */
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-info .rating {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.product-info .rating .fas.fa-star {
+    color: #FFD700; /* Warna bintang */
+}
+
+.product-info .location {
+    font-size: 0.75em;
+    color: #aaa;
+    display: block;
+    text-align: right;
+}
+
+/* NEW: Newsletter Section Styling */
+.newsletter-section {
+    background-color: #FF5722; /* Warna Shopee */
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.newsletter-section h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.newsletter-section p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    padding: 12px 15px;
+    font-size: 1em;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.newsletter-form button {
+    background-color: #e64a19; /* Warna Shopee lebih gelap */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.newsletter-form button:hover {
+    background-color: #c23b16;
+}
+
+.newsletter-message {
+    margin-top: 15px;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-top .header-right {
+        margin-top: 5px;
+    }
+
+    .header-middle {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo, .cart-icon {
+        margin-bottom: 10px;
+    }
+    .logo {
+        margin-right: 0;
+    }
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 5px 8px;
+    }
+
+    .category-grid h2, .product-grid h2 {
+        font-size: 1.3em;
+    }
+    .categories {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+    }
+    .category-item img {
+        width: 60px;
+        height: 60px;
+    }
+    .category-item p {
+        font-size: 0.8em;
+    }
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    .product-card img {
+        height: 150px;
+    }
+    .product-info h3 {
+        font-size: 0.85em;
+        height: 34px;
+    }
+    .product-info .price {
+        font-size: 1em;
+    }
+    .product-info .rating, .product-info .location {
+        font-size: 0.7em;
+    }
+
+    /* Newsletter Responsive */
+    .newsletter-form {
+        flex-direction: column;
+        width: 90%;
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+    }
+    .newsletter-form button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    .header-top a {
+        margin: 0 8px;
+    }
+    .main-nav ul li a {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+}

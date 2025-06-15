@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Clone - Baju, Celana, Sepatu, Jam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-top">
+            <div class="header-left">
+                <a href="#">Daftar</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="header-right">
+                <a href="#"><i class="fas fa-question-circle"></i> Bantuan</a>
+                <a href="#"><i class="fas fa-bell"></i> Notifikasi</a>
+            </div>
+        </div>
+        <div class="container header-middle">
+            <div class="logo">
+                <a><img src="images/shope.png" alt="Logo Shopee"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Cari di Shopee...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="filter-btn" data-category="all">Semua Produk</a></li>
+                    <li><a href="#" class="filter-btn" data-category="baju">Baju</a></li>
+                    <li><a href="#" class="filter-btn" data-category="celana">Celana</a></li>
+                    <li><a href="#" class="filter-btn" data-category="sepatu">Sepatu</a></li>
+                    <li><a href="#" class="filter-btn" data-category="jam">Jam Tangan</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-banner">
+                <img src="images/bannner ronaldo.png" alt="Promosi">
+            </section>
+
+            <section class="category-grid">
+                <h2>Kategori Pilihan</h2>
+                <div class="categories">
+                    <div class="category-item" data-category="baju">
+                        <img src="images/baju.webp" alt="Baju">
+                        <p>Baju</p>
+                    </div>
+                    <div class="category-item" data-category="celana">
+                        <img src="images/celana.webp" alt="Celana" onclick="celana()">
+                        <p>Celana</p>
+                    </div>
+                    <div class="category-item" data-category="sepatu">
+                        <img src="images/travis.jpg" alt="Sepatu">
+                        <p>Sepatu</p>
+                    </div>
+                    <div class="category-item" data-category="jam">
+                        <img src="images/rolex.jpg" alt="Jam Tangan">
+                        <p>Jam Tangan</p>
+                    </div>
+                    </div>
+            </section>
+
+            <section class="product-grid">
+                <h2>Produk Pilihan untukmu</h2>
+                <div class="products-container" id="productsContainer">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x200/CCCCCC/000000?text=Produk+Contoh" alt="Produk Contoh">
+                        <div class="product-info">
+                            <h3>Nama Produk Contoh (akan diganti JS)</h3>
+                            <p class="price">Rp 0.000</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i> 0.0 | Terjual 0
+                            </div>
+                            <span class="location">Lokasi Contoh</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Dapatkan Promo dan Update Terbaru!</h2>
+            <p>Berlangganan newsletter kami untuk penawaran eksklusif dan informasi produk terkini.</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="newsletterEmail" placeholder="Masukkan alamat email Anda" required>
+                <button type="submit">Berlangganan</button>
+            </form>
+            <p id="newsletterMessage" class="newsletter-message"></p>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Shope. Dibuat oleh Daniel.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
